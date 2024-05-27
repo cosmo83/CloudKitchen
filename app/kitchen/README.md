@@ -1,7 +1,7 @@
 ## Application Details
 |               |
 | ------------- |
-|**Generation Date and Time**<br>Thu May 16 2024 15:38:15 GMT+0530 (India Standard Time)|
+|**Generation Date and Time**<br>Mon May 27 2024 13:37:37 GMT+0530 (India Standard Time)|
 |**App Generator**<br>@sap/generator-fiori-elements|
 |**App Generator Version**<br>1.12.0|
 |**Generation Platform**<br>Visual Studio Code|
@@ -9,7 +9,7 @@
 |**Service Type**<br>Local Cap|
 |**Service URL**<br>http://localhost:4004/odata/v4/cloud-kitchen/
 |**Module Name**<br>kitchen|
-|**Application Title**<br>Manage Kitchens|
+|**Application Title**<br>Maintain Kitchen|
 |**Namespace**<br>com.satinfotech.cloudapps|
 |**UI5 Theme**<br>sap_horizon|
 |**UI5 Version**<br>1.124.0|
@@ -20,7 +20,7 @@
 
 ## kitchen
 
-Manage Kitchens
+Maintain Kitchen
 
 ### Starting the generated app
 
