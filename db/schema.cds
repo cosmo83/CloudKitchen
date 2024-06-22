@@ -18,3 +18,10 @@ entity Kitchen: managed, cuid {
     phone: String(15);
 }
 
+entity ProductLocal: managed {
+    key Product: String(40);
+    ProductType: String(4);
+    BaseUnit: String(3);
+    ProductGroup: String(18);
+    ProductDescription: String(40);
+}

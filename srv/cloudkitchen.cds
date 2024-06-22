@@ -16,13 +16,13 @@ service CloudKitchen @(requires: 'authenticated-user') {
     ProductType,
     BaseUnit,
     ProductGroup,
-    to_Description,
-    null as ProductDescription: String(80)
+    to_Description  
   }
 
-  
+  entity ProductLocal as projection on ClKitchen.ProductLocal;
 
 
 }
 
 annotate CloudKitchen.Kitchen with @odata.draft.enabled;
+annotate CloudKitchen.ProductLocal with @odata.draft.enabled;
