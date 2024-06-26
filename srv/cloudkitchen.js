@@ -26,6 +26,7 @@ module.exports = cds.service.impl(async function(){
     this.before('READ','ProductLocal', async req => {
         //console.log(this.entities);
         const {Products, ProductLocal} = this.entities;
+        console.log("Fired Read");
         qry = SELECT.from(Products).columns([{ref:['Product']},{ref:['ProductType']},{ref:['ProductGroup']},{ref:['BaseUnit']},{ref:['to_Description'],expand:['*']}]).limit(1000);
         let res = await productapi.run(qry);
         
@@ -43,7 +44,16 @@ module.exports = cds.service.impl(async function(){
     } )
 
 
-
+    this.before('UPDATE','ProductLocal', async req => {
+        const {Products, ProductLocal, ProductDescription} = this.entities;
+        console.log(req.data);
+        console.log("Fired Update");
+       
+        //delete(req.data.ProductDescription);
+        console.log(req.data);
+        updqry = UPDATE(ProductDescription).data({"ProductDescription":req.data.ProductDescription}).where({Product: req.data.Product, Language: 'EN'})
+        await productapi.run(updqry);
+    });
 
    
 })

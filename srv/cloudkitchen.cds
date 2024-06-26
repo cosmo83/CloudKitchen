@@ -19,6 +19,13 @@ service CloudKitchen @(requires: 'authenticated-user') {
     to_Description  
   }
 
+  entity ProductDescription as projection on productapi.A_ProductDescription{
+    Product,
+    Language,
+    ProductDescription
+  }
+
+
   entity ProductLocal as projection on ClKitchen.ProductLocal;
 
 
